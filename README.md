@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Star Wars Character Reference Book 🌌
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview 🚀
 
-## Available Scripts
+This project is a React-based application that serves as a reference book for Star Wars characters, utilizing the GraphQL endpoint SWAPI for data retrieval. It aims to showcase a comprehensive list of characters across all Star Wars movies, featuring detailed information and interactive functionalities.
 
-In the project directory, you can run:
+### Description 📖
 
-### `npm start`
+The goal is to implement a user-friendly interface that allows users to explore, filter, and favorite Star Wars characters. The application includes a table on the landing page displaying characters' details, server-side pagination, frontend-based filters, and a favorites feature for an enhanced user experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features 🌟
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Characters Table**: Lists all characters with details such as name, height, weight, home planet, species, gender, and eye color.
+- **Pagination**: Cursor-based server-side pagination for efficient data browsing.
+- **Favorites**: Users can mark characters as favorites, with persistence in the browser.
+- **Filters**: Frontend filters for gender, eye color, species, and film. Supports multi-filtering for eye color and species.
+- **Favorites Only Mode**: Displays only characters marked as favorites, independent of pagination.
+- **Character Details Preview**: Access to a detailed preview of each character, including a list of movies they appear in. Implemented through a dedicated page or modal.
 
-### `npm test`
+## Technologies and Libraries 🛠️
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=white) For building the user interface.
+- ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white) Ensures type safety across the application.
+- ![Ant Design](https://img.shields.io/badge/-Ant%20Design-0170FE?logo=ant-design&logoColor=white) UI library for React components.
+- ![Apollo Client](https://img.shields.io/badge/-Apollo%20Client-311C87?logo=apollo-graphql&logoColor=white) For interacting with the GraphQL endpoint.
+- ![GraphQL Codegen](https://img.shields.io/badge/-GraphQL%20Codegen-E10098?logo=graphql&logoColor=white) Tooling for generating code based on GraphQL schemas and operations.
 
-### `npm run build`
+## Getting Started 🏁
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js
+- npm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup
 
-### `npm run eject`
+1. Clone the repository.
+2. Navigate to the project directory and install dependencies:  -> npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Available Scripts 📜
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## In the project directory, you can run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm start: Runs the app in development mode. Open <http://localhost:3000> to view it in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm test: Launches the test runner in the interactive watch mode.
 
-## Learn More
+npm run build: Builds the app for production to the build folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm run eject: Note: this is a one-way operation. Once you eject, you can't go back!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Learn More 📚
 
-### Code Splitting
+For more information on React, Apollo Client, Ant Design, and other technologies used, refer to their official documentation:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React documentation](https://reactjs.org/)
+- [Apollo Client](https://www.apollographql.com/docs/react/)
+- [Ant Design](https://ant.design/)
+- [GraphQL Codegen](https://www.graphql-code-generator.com/)
 
-### Analyzing the Bundle Size
+## Deployment 🚀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Refer to the [deployment section](https://facebook.github.io/create-react-app/docs/deployment) of the Create React App documentation for guidance on deploying the application.
