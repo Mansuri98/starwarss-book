@@ -1,4 +1,4 @@
-export const getFavorites = () => {
+export const getFavorites = (): string[] => {
   const favorites = localStorage.getItem("favorites");
   try {
     return favorites ? JSON.parse(favorites) : [];
@@ -8,16 +8,16 @@ export const getFavorites = () => {
   }
 };
 
-export const toggleFavorite = (characterId) => {
+export const toggleFavorite = (characterId: string): void => {
   let favorites = getFavorites();
   if (favorites.includes(characterId)) {
-    favorites = favorites.filter((id) => id !== characterId);
+    favorites = favorites.filter((id: string) => id !== characterId);
   } else {
     favorites.push(characterId);
   }
   localStorage.setItem("favorites", JSON.stringify(favorites));
 
-  function isLocalStorageAvailable() {
+  const isLocalStorageAvailable = (): boolean => {
     try {
       const test = "test";
       localStorage.setItem(test, test);
@@ -26,7 +26,8 @@ export const toggleFavorite = (characterId) => {
     } catch (e) {
       return false;
     }
-  }
+  };
+
   if (!isLocalStorageAvailable()) {
     console.error("Local storage is not available");
   }

@@ -1,6 +1,7 @@
 .CharacterTable {
-  max-width: 90%;
-  margin: 30px auto;
+  width: 100%;
+  max-width: none;
+  margin: 20px 0;
   overflow-x: auto;
   border-collapse: collapse;
   font-family: "Star Jedi", Arial, sans-serif;
@@ -23,7 +24,7 @@
 
 .ant-table-tbody > tr > td {
   background-color: transparent;
-  color: #ffffff;
+  color: #000000;
   font-family: "Star Jedi V2", sans-serif;
   border-bottom: 1px solid #112244;
 }
@@ -66,8 +67,10 @@ body {
   .CharacterTable,
   .Filters,
   .Pagination {
-    width: 100%;
+    width: calc(
+      100% - 40px
+    ); /* Assuming you want to maintain 20px padding on both sides */
     margin: 0;
-    padding: 5px;
+    padding: 20px;
   }
 }

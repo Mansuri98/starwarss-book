@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  padding: 20px;
+  padding: 10px;
   background-color: #050c29;
   background-image: radial-gradient(
       circle,
@@ -23,29 +23,29 @@
   color: #feda4a;
   font-size: 2.5rem;
   font-weight: bold;
-  padding-bottom: 8%;
+  padding-bottom: 3%;
   margin: 30px 0;
   text-align: center;
 }
 
-/* Styles for smaller devices */
 @media (max-width: 600px) {
   .welcome-message {
     font-size: 2rem;
   }
 }
+.table-container {
+  margin-bottom: 10px;
+}
 
 @media (max-width: 600px) {
-  .Home {
-    flex-direction: column;
-  }
-
   .CharacterTable,
   .Filters,
   .Pagination {
-    width: 100%;
+    width: calc(
+      100% - 40px
+    ); /* Assuming you want to maintain 20px padding on both sides */
     margin: 0;
-    padding: 5px;
+    padding: 20px;
   }
 }
 

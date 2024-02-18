@@ -1,7 +1,19 @@
 import React from "react";
 import { Modal } from "antd";
 
-const CharacterPreview = ({ character, isVisible, onClose }) => {
+interface CharacterPreviewProps {
+  character: {
+    name: string;
+  };
+  isVisible: boolean;
+  onClose: () => void;
+}
+
+const CharacterPreview: React.FC<CharacterPreviewProps> = ({
+  character,
+  isVisible,
+  onClose,
+}) => {
   return (
     <Modal
       title={character.name}

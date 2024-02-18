@@ -4,32 +4,32 @@ import Filters from "../../components/Filters/Filters";
 import "./Home.css";
 import CustomPagination from "../../components/Pagination/Pagination";
 
-const Home = () => {
-  const [filters, setFilters] = useState({});
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0); 
-j
-  const handleFilterChange = useCallback((filterType, value) => {
-    setFilters((prev) => ({
-      ...prev,
-      [filterType]: value || undefined,
-    }));
-  }, []);
+interface FiltersState {
+  [key: string]: string | undefined;
+}
 
-  const handlePageChange = useCallback((page) => {
+const Home = () => {
+  const [filters, setFilters] = useState<FiltersState>({});
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+
+  const handleFilterChange = useCallback(
+    (filterType: string, value: string | undefined) => {
+      setFilters((prev) => ({
+        ...prev,
+        [filterType]: value,
+      }));
+    },
+    []
+  );
+
+  const handlePageChange = useCallback((page: number) => {
     setCurrentPage(page);
   }, []);
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log(
-        "Fetching data with filters: ",
-        filters,
-        " and page: ",
-        currentPage
-      );
-
-      setTotalPages(10); 
+      setTotalPages(10);
     };
 
     fetchData();
@@ -39,11 +39,13 @@ j
     <div className="Home">
       <h1 className="welcome-message">Welcome to the Star Wars Archives</h1>
       <Filters onFilterChange={handleFilterChange} />
-      <CharacterTable filters={filters} currentPage={currentPage} />
+      <div className="table-container">
+        <CharacterTable filters={filters} currentPage={currentPage} />
+      </div>
       <CustomPagination
         current={currentPage}
         onChange={handlePageChange}
-        total={totalPages * 10} 
+        total={totalPages * 10}
       />
     </div>
   );

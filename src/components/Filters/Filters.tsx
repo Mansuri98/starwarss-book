@@ -4,7 +4,33 @@ import { Select, Input } from "antd";
 
 const { Option } = Select;
 
-const Filters = ({ onFilterChange }) => {
+interface FiltersProps {
+  onFilterChange: (filterType: string, value: string) => void;
+}
+
+const Filters: React.FC<FiltersProps> = ({ onFilterChange }) => {
+  const eyeColorOptions = [
+    "red",
+    "yellow",
+    "blue",
+    "brown",
+    "black",
+    "blue-gray",
+    "n/a",
+  ];
+
+  const hairColorOptions = [
+    "black",
+    "brown, grey",
+    "brown",
+    "auburn, white",
+    "blond",
+    "blue",
+    "n/a",
+  ];
+
+  const genderOptions = ["male", "female", "n/a"];
+
   return (
     <div className="Filters">
       <Input
@@ -13,28 +39,17 @@ const Filters = ({ onFilterChange }) => {
         allowClear
         className="FilterInput"
       />
-
-      <Input
-        placeholder="Filter by Height"
-        onChange={(e) => onFilterChange("height", e.target.value)}
-        allowClear
-        className="FilterInput"
-      />
-
-      <Input
-        placeholder="Filter by Mass"
-        onChange={(e) => onFilterChange("mass", e.target.value)}
-        allowClear
-        className="FilterInput"
-      />
-
       <Select
         placeholder="Filter by Gender"
         onChange={(value) => onFilterChange("gender", value)}
         allowClear
         className="FilterSelect"
       >
-        {/* Gender options */}
+        {genderOptions.map((gender) => (
+          <Option key={gender} value={gender}>
+            {gender}
+          </Option>
+        ))}
       </Select>
 
       <Select
@@ -43,29 +58,25 @@ const Filters = ({ onFilterChange }) => {
         allowClear
         className="FilterSelect"
       >
-        {/* Eye color options */}
+        {eyeColorOptions.map((color) => (
+          <Option key={color} value={color}>
+            {color}
+          </Option>
+        ))}
       </Select>
 
       <Select
-        placeholder="Filter by Species Name"
-        onChange={(value) => onFilterChange("speciesName", value)}
+        placeholder="Filter by Hair Color"
+        onChange={(value) => onFilterChange("hairColor", value)}
         allowClear
         className="FilterSelect"
       >
-        {/* Species name options */}
+        {hairColorOptions.map((color) => (
+          <Option key={color} value={color}>
+            {color}
+          </Option>
+        ))}
       </Select>
-
-      <Select
-        placeholder="Filter by Home Planet"
-        onChange={(value) => onFilterChange("homePlanet", value)}
-        allowClear
-        className="FilterSelect"
-      >
-        {/* Home planet options */}
-      </Select>
-
-      {/* Films might be more complex to filter if there are many,
-          consider a different UI approach or a multiple select filter. */}
     </div>
   );
 };

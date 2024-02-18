@@ -1,28 +1,48 @@
 import { gql } from "@apollo/client";
 
 export const GET_CHARACTERS = gql`
-  query GetCharacters($page: Int, $search: String) {
-    people(page: $page, search: $search)
-      @rest(type: "PeopleResponse", path: "people/?{args}") {
+  query GetCharacters(
+    $page: Int
+    $search: String
+    $gender: String
+    $eyeColor: String
+    $hairColor: String
+    $homePlanet: String
+  ) {
+    people(
+      page: $page
+      search: $search
+      gender: $gender
+      eyeColor: $eyeColor
+      hairColor: $hairColor
+      homePlanet: $homePlanet
+    ) @rest(type: "PeopleResponse", path: "people/?page={args.page}") {
       count
-      next
-      previous
       results @type(name: "Person") {
         name
         height
         mass
         gender
-        eyeColor
-        species @type(name: "Species") {
+        eye_color
+        hair_color
+        homeworld {
           name
         }
-        homeworld @type(name: "Planet") {
+        species {
           name
         }
-        filmConnection @type(name: "FilmConnection") {
-          films @type(name: "Film") {
+        filmConnection {
+          films {
             title
           }
+        }
+        starships {
+          name
+          model
+        }
+        vehicles {
+          name
+          model
         }
       }
     }
