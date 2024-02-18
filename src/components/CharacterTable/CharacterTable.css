@@ -1,0 +1,73 @@
+.CharacterTable {
+  max-width: 90%;
+  margin: 30px auto;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-family: "Star Jedi", Arial, sans-serif;
+}
+
+.ant-table {
+  background-color: rgba(0, 0, 34, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(44, 113, 203, 0.5);
+  color: white;
+}
+
+.ant-table-thead > tr > th {
+  background-image: linear-gradient(to right, #1a237e, #0d47a1);
+  color: #ffffff;
+  font-size: 1.1em;
+  font-family: "Star Jedi V2", sans-serif;
+  border-bottom: 3px solid #29b6f6;
+}
+
+.ant-table-tbody > tr > td {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Star Jedi V2", sans-serif;
+  border-bottom: 1px solid #112244;
+}
+.ant-table-tbody > tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.ant-pagination-item,
+.ant-pagination-item-link {
+  background: transparent;
+  color: #ffffff;
+  border-color: #29b6f6;
+}
+
+.ant-pagination-item-active {
+  font-weight: bold;
+  background: #29b6f6;
+  color: #000022;
+}
+
+@font-face {
+  font-family: "Star Jedi V2";
+  src: url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot");
+  src: url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0c724f6aa457310440cf8949c615cbd7.svg#Star Jedi V2")
+      format("svg");
+}
+
+body {
+  font-family: "Star Jedi V2", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .CharacterTable,
+  .Filters,
+  .Pagination {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+  }
+}

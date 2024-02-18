@@ -1,0 +1,45 @@
+.ant-pagination .ant-pagination-item,
+.ant-pagination .ant-pagination-item-link {
+  color: #ffffff;
+  background-color: whitesmoke;
+  border-color: rgb(254, 218, 74);
+  font-family: "Star Jedi V2", sans-serif;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background-color: rgb(254, 218, 74);
+  color: #ffffff;
+}
+
+.ant-pagination-item:hover,
+.ant-pagination-item-link:hover {
+  border-color: rgb(254, 218, 74);
+  color: #ffffff;
+}
+
+.ant-pagination-prev a,
+.ant-pagination-next a {
+  background-color: white;
+  color: #ffffff;
+}
+
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next {
+  display: none !important;
+}
+
+.ant-pagination-jump-prev
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis,
+.ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis {
+  color: #ffffff;
+  background-color: transparent; 
+}
+
+.ant-pagination-item a,
+.ant-pagination-item a:hover {
+  color: #ffffff;
+  background-color: transparent;
+}
