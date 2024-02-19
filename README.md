@@ -51,7 +51,7 @@ npm run eject: Note: this is a one-way operation. Once you eject, you can't go b
 
 ## Learn More 📚
 
-For more information on React, Apollo Client, Ant Design, and other technologies used, refer to their official documentation:
+For more information on React, Apollo Client, Ant Design, and other technologies used, refer to their official documentation below:
 
 - [React documentation](https://reactjs.org/)
 - [Apollo Client](https://www.apollographql.com/docs/react/)
